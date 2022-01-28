@@ -4,7 +4,7 @@ USER root
 # Go to location
 RUN cd /usr/lib/northstar/R2Northstar/
 # Get zip
-RUN wget https://github.com/R2Northstar/NorthstarMods/archive/refs/heads/main.zip
+RUN wget https://github.com/alt4/NorthstarMods/archive/refs/heads/main.zip
 # Remove old mods, unzip new, rename folder, then cleanup
 RUN rm -rf mods/ \
     && unzip main.zip \
