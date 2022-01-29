@@ -7,3 +7,17 @@ The goal of this image is to offer a version of pg9182's [`northstar-dedicated` 
 This image is designed mainly for testing new releases, so using it in production is discouraged!
 
 It is however intended to work as a drop-in replacement for `northstar-dedicated`, simply updating the contents of the folder containing the Northstar mods. Therefore instructions on its usage and system requirements can be found in [pg9182's repo](https://github.com/pg9182/northstar-dedicated/).
+
+## Building
+
+Build image via
+
+```bash
+docker build --no-cache -t northstar-git-dedicated:latest .
+```
+
+make sure to use `--no-cache` to prevent accidentally using an older version of `NorthstarMods` due to previously cached layers.
+
+## Replacing `pg9182/northstar-dedicated`
+
+As this image is based on pg9182's, it can be used as a drop-in replacement. However as `northstar-git-dedicated` does not provide a registry, make sure to remove `--pull always` from your run command.
